@@ -19,12 +19,17 @@ const compute = () => {
 
 
 const clearDisplay = () => {
-    displayElement.value = null
+    
+    // displayElement.value = null       .......(myself)
+    
+    displayElement.value = ''
+
 }
 
 const deleteLastCharacter = () => {
-    //this.displayElement = this.displayElement.toString()
-    //console.log(this.displayElement.slice(0,-1))
 
-    displayElement.value = displayElement.value.slice(0,-1)
+    // displayElement.value = displayElement.value.slice(0,-1)     .....(self)
+
+    displayElement.value = displayElement.value.slice(0, displayElement.value.length -1)
+
 }
