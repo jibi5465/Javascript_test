@@ -1,20 +1,22 @@
 const displayElement = document.getElementById('calculator-display')
-count = 0;
+// count = 0;
 
 const buttonPressed = (character) => {
     displayElement.value = displayElement.value + character
     
-    if (count == -1) {
-    displayElement.value = null}
-    count = 1
-    console.log("count"+count)
-    console.log(displayElement.value)
+    // if (count == -1) {
+    // displayElement.value = null}
+    // count = 1
+    // console.log("count"+count)
+    // console.log(displayElement.value)
 
 }
 
 const compute = () => {
     displayElement.value = eval(displayElement.value)
-    count = -1;
+
+    // count = -1;
+    
 }
 
 
