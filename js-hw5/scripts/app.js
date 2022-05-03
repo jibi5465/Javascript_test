@@ -71,6 +71,7 @@ const findLowest = () => {
   const min = minInput.value
   let prime = 0
 
+  // recheck min value 
   if (min < 2) {
       let min = 2
       // console.log(min)
@@ -114,7 +115,7 @@ const findLowest = () => {
     }
   }  
 
-
+// result 
   if (prime !== 0) {
     resultText.innerHTML = prime
   } else {
