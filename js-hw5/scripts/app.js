@@ -70,21 +70,49 @@ const findLowest = () => {
   const max = maxInput.value
   const min = minInput.value
   let prime = 0
-  for (let index = min; index < max; index++) {
-    let isPrime = true
-    for (let nestIndex = 2; nestIndex < index; nestIndex++) {
-      if (index % nestIndex === 0) {
-        isPrime = false
+
+  if (min < 2) {
+      let min = 2
+      // console.log(min)
+  
+    for (let index = min; index < max; index++) {
+      let isPrime = true
+      // console.log(index)
+    
+      for (let nestIndex = 2; nestIndex < index; nestIndex++) {
+      
+        if (index % nestIndex === 0) {
+          isPrime = false
+          break
+        }
+      }
+      
+      if (isPrime) {
+        prime = index
         break
       }
     }
-
-    if (isPrime) {
-      prime = index
-      break
+  }else if (min >= 2) {
+    for (let index = min; index < max; index++) {
+      let isPrime = true
+      console.log(index)
+      
+      for (let nestIndex = 2; nestIndex < index; nestIndex++) {
+      
+        if (index % nestIndex === 0) {
+          isPrime = false
+          console.log(isPrime)
+          break
+        }
+      }
+      
+      if (isPrime) {
+        prime = index
+        break
+        console.log(prime)
+      }
     }
-  }
-  
+  }  
 
 
   if (prime !== 0) {
