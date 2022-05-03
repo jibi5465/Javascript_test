@@ -25,15 +25,15 @@ const validate = () => {
   }
 
   maxInput.value = max
-  minInput.valu = min
+  minInput.value = min
+
 }
 
 const findLargest = () => {
-  // validate()
 
   const max = maxInput.value
   const min = minInput.value
-
+  
   let index = max
   let prime = 0
 
@@ -41,26 +41,27 @@ const findLargest = () => {
     let loop = 2
     let limit = index
     let isPrime = true
-    do {
-      if (index % loop === 0) {
-        isPrime = false;
+      do {
+        if (index % loop === 0) {
+          isPrime = false;
+          break
+        }
+        loop++;
+      }while (loop < limit)
+
+      if (isPrime) {
+        prime = index
         break
       }
-      loop++
-    } while (loop < limit)
-    if (isPrime) {
-      prime = index
-      break
-    }
-    index--
-  } while (index >= min)
+      index--
+
+  }while (index >= min)
 
   if (prime !== 0) {
     resultText.innerHTML = prime
-  } else {
+  }else {
     resultText.innerHTML = 'NO PRIME NUMBER'
   }
-
 }
 
 const findLowest = () => {
@@ -92,4 +93,5 @@ const findLowest = () => {
     resultText.innerHTML = 'NO PRIME NUMBER'
   }
 }
+
 
