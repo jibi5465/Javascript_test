@@ -8,7 +8,7 @@ findBtn.addEventListener('click', async () => {
 
   try {
     const input = inputName.value
-    const url = `https://rickandmortyapi.com/api/character?name=${input}`
+    const url = `https://rickandmortyapi.com/api/character/?page=2&name=${input}&status=alive`
     const response = await(await fetch(url)).json()
 
     if (!response.results){
