@@ -3,8 +3,8 @@ const minInput = document.getElementById('min-input')
 const resultText = document.getElementById('result-text')
 
 const validate = () => {
-  let max = maxInput.value
-  let min = minInput.value
+  let max = +maxInput.value
+  let min = +minInput.value
 
   if (!max) {
     max = 0
@@ -31,8 +31,8 @@ const validate = () => {
 
 const findLargest = () => {
 
-  const max = maxInput.value
-  const min = minInput.value
+  const max = +maxInput.value
+  const min = +minInput.value
   
   let index = max
   let prime = 0
@@ -67,8 +67,8 @@ const findLargest = () => {
 const findLowest = () => {
   // validate()
 
-  const max = maxInput.value
-  const min = minInput.value
+  const max = +maxInput.value
+  const min = +minInput.value
   let prime = 0
 
   // recheck min value 
