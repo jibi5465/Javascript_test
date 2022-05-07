@@ -93,7 +93,7 @@ const findLowest = () => {
         break
       }
     }
-  }else if (min > 2) {
+  }else if (min >= 2) {
     for (let index = min; index < max; index++) {
       let isPrime = true
       console.log(index)
