@@ -74,11 +74,11 @@ const findLowest = () => {
   // recheck min value 
   if (min < 2) {
       let min = 2
-      // console.log(min)
+      console.log(min)
   
     for (let index = min; index < max; index++) {
       let isPrime = true
-      // console.log(index)
+      console.log(index)
     
       for (let nestIndex = 2; nestIndex < index; nestIndex++) {
       
